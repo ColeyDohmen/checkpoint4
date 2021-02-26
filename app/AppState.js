@@ -2,12 +2,16 @@ import Value from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 import Image from "./Models/Image.js"
+import Quote from "./Models/Quote.js"
 
 class AppState extends EventEmitter {
   /** @type {Value[]} */
   values = []
  /** @type {Image} */
  image = null
+
+  /** @type {Quote} */
+  quote = null
 
 }
 

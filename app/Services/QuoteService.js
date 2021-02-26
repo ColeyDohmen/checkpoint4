@@ -1,22 +1,22 @@
 import { ProxyState } from "../AppState.js";
-import Image from "../Models/Image.js";
+import Quote from "../Models/Quote.js";
 import { api } from "./AxiosService.js";
 
 class QuoteService {
 
     constructor(){
         console.log(`quote service`);
-        
+        this.getQuote()
     }
 
-async getImage(){
-    // try {
-    //     const res = await api.get("images")
-    //     console.log(res)
-    //     ProxyState.image = res.data
-    // } catch(error){
-    //     console.error(error)
-    // }
+async getQuote(){
+    try {
+        const res = await api.get("quotes")
+        console.log(res)
+        ProxyState.quote = res.data
+    } catch(error){
+        console.error(error)
+    }
 
 }
   addValue() {

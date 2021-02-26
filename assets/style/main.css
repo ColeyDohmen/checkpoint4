@@ -5,6 +5,13 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ body {
+  background-image: url('${ProxyState.image.url}');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
 :root {
   --blue: blue;
   --indigo: indigo;

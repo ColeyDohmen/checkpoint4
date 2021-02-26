@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { valuesService } from "../Services/ValuesService.js";
+import { quoteService } from "../Services/QuoteService.js";
 
 
 //Private
@@ -16,14 +16,14 @@ function _draw() {
 }
 
 //Public
-export default class ValuesController {
+export default class QuoteController {
   constructor() {
     ProxyState.on("values", _draw);
     _draw()
   }
 
   addValue() {
-    valuesService.addValue()
+    quoteService.addValue()
   }
 
 }

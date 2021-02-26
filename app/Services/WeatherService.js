@@ -1,19 +1,20 @@
 import { ProxyState } from "../AppState.js";
 import Quote from "../Models/Quote.js";
+import Weather from "../Models/Weather.js";
 import { api } from "./AxiosService.js";
 
-class QuoteService {
+class WeatherService {
 
     constructor(){
-        console.log(`quote service`);
-        this.getQuote()
+        console.log(`weather service`);
+        this.getWeather()
     }
 
-async getQuote(){
+async getWeather(){
     try {
-        const res = await api.get("quotes")
+        const res = await api.get("weather")
         console.log(res)
-        ProxyState.quote = new Quote(res.data)
+        ProxyState.weather = new Weather(res.data)
     } catch(error){
         console.error(error)
     }
@@ -24,4 +25,4 @@ async getQuote(){
   }
 }
 
-export const quoteService = new QuoteService();
+export const weatherService = new WeatherService();

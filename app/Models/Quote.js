@@ -8,8 +8,9 @@ export default class Quote {
     get Template() {
 
         return /*html*/`
-        <div class="card p-2 value">
-            ${this.content}
+        <div class="card quote text-center">
+           <p> ${this.content} <p>
+            ${this.author}
         </div>
         `
     }

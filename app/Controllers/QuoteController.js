@@ -5,11 +5,11 @@ import { quoteService } from "../Services/QuoteService.js";
 //Private
 function _drawQuote() {
    
-    document.getElementById("quote").innerHTML = `<h5 class="text-light">${ProxyState.quote.content}</h5>`
+    document.getElementById("quote").innerHTML = ProxyState.quote.Template
     
     console.log(ProxyState.quote.content);
 }
-
+// `<h3 class="text-light">${ProxyState.quote.content}</h3>`
 //Public
 export default class QuoteController {
   constructor() {

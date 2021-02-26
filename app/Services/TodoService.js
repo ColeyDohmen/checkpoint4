@@ -1,19 +1,19 @@
 import { ProxyState } from "../AppState.js";
-import Quote from "../Models/Quote.js";
+import Todo from "../Models/Todo.js";
 import { api } from "./AxiosService.js";
 
-class QuoteService {
+class TodoService {
 
     constructor(){
-        console.log(`quote service`);
+        console.log(`todo service`);
         this.getQuote()
     }
 
 async getQuote(){
     try {
-        const res = await api.get("quotes")
+        const res = await api.get("coley/todos")
         console.log(res)
-        ProxyState.quote = new Quote(res.data)
+        ProxyState.todo = res.data
     } catch(error){
         console.error(error)
     }
@@ -24,4 +24,4 @@ async getQuote(){
   }
 }
 
-export const quoteService = new QuoteService();
+export const todoService = new TodoService();

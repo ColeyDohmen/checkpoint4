@@ -19,8 +19,8 @@ class AppState extends EventEmitter {
     /** @type {Weather} */
     weather = null
 
-      /** @type {Todo} */
-  todo = null
+      /** @type {Todo[]} */
+  todo = []
 
 }
 

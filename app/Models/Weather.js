@@ -7,7 +7,7 @@ export default class Weather {
 
         return /*html*/`
         <div class="text-light ">
-            <h1>${this.temp}<h1>
+            <h1>${this.temp} K<h1>
         </div>
         `
     }

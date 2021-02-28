@@ -22,14 +22,21 @@
     </header>
     <main class="container-fluid">
         <div class="row">
+            <div class="col-4 card">
+                <form onsubmit="app.todoController.addTodo(event)">
+                    <input type="text" class="form-control" name="" placeholder="Add new to-do...." />
+                    <button class="btn btn-primary mt-1 form-control" type="submit">
+                        <h5>Add</h5>
+                    </button>
+                    <p class="text-light" id="songs"></p>
+                </form>
+                <div id="todo"></div>
+            </div>
             <div class="col">
                 <div id="quote"></div>
             </div>
             <div class="col">
                 <div id="weather"></div>
-            </div>
-            <div class="col">
-                <div id="todo"></div>
             </div>
         </div>
     </main>

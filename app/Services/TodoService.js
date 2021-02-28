@@ -6,10 +6,10 @@ class TodoService {
 
     constructor(){
         console.log(`todo service`);
-        this.getQuote()
+        this.getTodo()
     }
 
-async getQuote(){
+async getTodo(){
     try {
         const res = await api.get("coley/todos")
         console.log(res)

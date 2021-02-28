@@ -8,7 +8,7 @@ export default class Todo {
     get Template() {
 
         return /*html*/`
-        <div class="card p-2 value">
+        <div class="card p-2 value" >
             ${this._id}
         </div>
         `

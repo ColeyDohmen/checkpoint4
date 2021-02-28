@@ -10,12 +10,12 @@ export default class Todo {
     get Template() {
 
         return /*html*/`
-        <div class="col-4 border rounded shadow-lg text-dark">
+        <div class="col-6 border rounded shadow-lg text-dark">
             <h2><button class="text close text-dark"
             onclick="app.todoController.deleteTodo('${this._id}')"><span>&times;</span></button> </h2>
-            <h5>To-do</h5>
+            <h5>${this.description}<input type="checkbox"></h5>
             
-            <p>${this.description}</p>
+            <p></p>
                     
                     
                     </div>

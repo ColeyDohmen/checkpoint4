@@ -42,9 +42,25 @@ async createTodo(rawTodo){
           console.error(error)
       }
   }
-  addValue() {
-    // ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
-  }
+  async checkMark(todoId){
+    let CheckedTask = ProxyState.todo.find(t => t._id == todoId)
+
+    if (CheckedTask.completed == true){
+        CheckedTask.completed = false
+    }
+    else if (CheckedTask.completed == false){
+        CheckedTask.completed = true
+    }
+    try {
+        const res = await api.put('coley/todos/' + todoId, CheckedTask)
+        console.log(res.data)
+    
+    ProxyState.todo = ProxyState.todo
+    } catch (error) {
+      console.error(error)
+    }
+    console.log(`${todoId}`);
+}
 }
 
 export const todoService = new TodoService();

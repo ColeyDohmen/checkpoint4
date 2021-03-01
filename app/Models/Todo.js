@@ -13,7 +13,7 @@ export default class Todo {
         <div class="col-6 border rounded shadow-lg text-dark">
             <h2><button class="text close text-dark"
             onclick="app.todoController.deleteTodo('${this._id}')"><span>&times;</span></button> </h2>
-            <h5>${this.description}<input type="checkbox"></h5>
+            <h5>${this.description}<input type="checkbox"  ${this.completed ? "checked": ``} onclick="app.todoController.checkMark('${this._id}')"></h5>
             
             <p></p>
                     

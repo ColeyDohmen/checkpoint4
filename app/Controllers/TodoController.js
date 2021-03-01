@@ -39,6 +39,10 @@ export default class TodoController {
        
        todoService.deleteTodo(_id)
      }
+
+     checkMark(todoId){
+      todoService.checkMark(todoId)
+  }
     }
 
 

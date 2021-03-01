@@ -45,12 +45,14 @@ async createTodo(rawTodo){
   async checkMark(todoId){
     let CheckedTask = ProxyState.todo.find(t => t._id == todoId)
 
-    if (CheckedTask.completed == true){
-        CheckedTask.completed = false
-    }
-    else if (CheckedTask.completed == false){
-        CheckedTask.completed = true
-    }
+    // if (CheckedTask.completed == true){
+    //     CheckedTask.completed = false
+    // }
+    // else if (CheckedTask.completed == false){
+    //     CheckedTask.completed = true
+    // }
+    CheckedTask.completed = !CheckedTask.completed
+
     try {
         const res = await api.put('coley/todos/' + todoId, CheckedTask)
         console.log(res.data)

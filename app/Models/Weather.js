@@ -6,7 +6,7 @@ export default class Weather {
     get Template() {
 
         return /*html*/`
-        <div class="text-light ">
+        <div class="text-light text-right">
             <h1>${this.temp} K<h1>
         </div>
         `
